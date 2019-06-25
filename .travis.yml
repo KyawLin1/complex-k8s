@@ -20,3 +20,16 @@ after_success:
   - docker push kyawlin/complex-nginx
   - docker push kyawlin/complex-server
   - docker push kyawlin/complex-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-southeast-1
+  app: complex
+  env: Complex-env
+  bucket_name: elasticbeanstalk-ap-southeast-1-017344882452
+  bucket_path: complex
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
