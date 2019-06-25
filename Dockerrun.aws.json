@@ -6,21 +6,21 @@
       "image": "kyawlin/complex-client",
       "hostname": "client",
       "essential": false,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "nginx",
       "image": "kyawlin/complex-nginx",
       "hostname": "hostname",
       "essential": true,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "server",
       "image": "kyawln/complex-server",
       "hostname": "api",
       "essential": false,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "worker",
@@ -34,7 +34,7 @@
         }
       ],
       "links": ["client", "server"],
-      "memory": 128
+      "memory": 256
     }
   ]
 }
