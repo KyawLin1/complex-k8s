@@ -68,6 +68,4 @@ app.post('/values', async (req, res) => {
 app.listen(5000, err => {
   console.log('Listening');
   console.log('redis configurations:')
-  console.log(keys.redisHost);
-  console.log(keys.redisPort);
 });
