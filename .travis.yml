@@ -16,7 +16,7 @@ before_install:
   - gcloud config set compute/zone asia-southeast1
   - gcloud container clusters get-credentials complex-cluster
   # Docker Login
-  - echo "$DOCKED_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Docker build for testing
   - docker build -t kyawlin/react-test -f ./client/Dockerfile.dev ./client
 script:
